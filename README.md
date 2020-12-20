@@ -48,6 +48,12 @@ el listado de pruebas unitarias, están dentro de los archivos con extensión ".
 
 - Severidad Low  │  Prototype Pollution  │ Package ini | Dependency of @angular/cli [dev] │ Patched in │ >1.3.6 
 ```
+``` 
+
+Si encuenta una vulnerabilidad de produndidad 3, que es esperada, debe ejecutar el siguiente comando para corregir esta posibilidad de vulnerabilidad dentro del proyecto.
+
+npm update ini --depth 3 
+```
 
 ### Resolución de problemas
 
