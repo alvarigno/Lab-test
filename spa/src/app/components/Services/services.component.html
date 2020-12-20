@@ -1,0 +1,36 @@
+<h1>Servicios <small>Configuración y Uso</small></h1>
+<hr>
+{{ _termino }}
+
+<div class="row" *ngIf="_testData.length == 0">
+  <div class="col-lg-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con el término: {{ _termino }}
+    </div>
+  </div>
+</div>
+
+<div class="card-columns animated fadeIn">
+  <div class="card" *ngFor="let serv of _testData; let i = index">
+    <div class="card-body">
+      <h4 class="card-title">{{ serv.url_params }} <!-- {{ esto es conocido como interpolación }} --></h4>
+      <p>{{serv.descriptor}}</p>
+      
+      <h5>Configuración</h5>
+      <hr>
+      <span>Base url: {{ serv.structure.base_url}} <br /></span>
+      <label *ngIf="serv.structure?.params?.key">key: {{ serv.structure.params?.key }} <br /></label>
+      <p *ngIf="serv.example.response?.cobre?.key">Key cobre: {{ serv.example?.response.cobre?.key }}</p>
+
+      <h5>Ejemplo</h5>
+      <hr>
+      <span>{{ serv.example?.link }}</span>
+      <button class="btn btn-outline-primary btn-block" (click)="verEjemplo(i)">
+          ver ejemplo
+      </button>
+
+    </div>
+  </div>
+</div>
+
+
