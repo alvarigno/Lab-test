@@ -25,6 +25,10 @@ el listado de pruebas unitarias, están dentro de los archivos con extensión ".
 
 ## Uso de NPM Audit
 
+Mostrará el listado de vulnerabilidades.
+> npm audit 
+
+Reparará las vulnerabilidades encontradas, dependiendo de la versión del devkit CLI que está ejecutando y sus dependencias.
 > npm audit fix
 
 ### Instalación de componentes adicionales
@@ -41,6 +45,7 @@ el listado de pruebas unitarias, están dentro de los archivos con extensión ".
  
  `npm i chartjs-plugin-datalabels`
 
+## Vulnerabilidades
 
 `Si encuentra alguna vulnerabilidad con esta solución, sólo debería mostrar la siguiente. Esto debido a la versión de angular-devkit/build-angular que no es compatible con las dependencias de karma, debe hacer un downgrade de devkit debido que la última versión de @angular-devkit/build-angular`
 
