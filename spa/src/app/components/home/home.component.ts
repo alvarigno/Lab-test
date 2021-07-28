@@ -12,6 +12,15 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.Randomw());
   }
+
+  public Randomw(){
+
+    return Math.floor(Math.random() * 1000);
+
+
+  }
+
 
 }
